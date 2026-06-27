@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+*.log
+node_modules/
+dist/
+coverage/
+
+# OpenClaw local runtime state must not be committed.
+.openclaw/
+openclaw.json
+openclaw.sqlite
+*.jsonl
+*.bak
+*.token
+*.secret
