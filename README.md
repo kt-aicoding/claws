@@ -23,6 +23,7 @@ OpenClaw 运维实践、定时任务修复经验和多机器治理手册。
 | [机器盘点模板](docs/reference/machine-inventory-template.md) | 用别名和聚合指标记录多台 OpenClaw 机器 |
 | [OpenClaw Fleet Optimization Goal](docs/goals/openclaw-fleet-optimization.md) | 长时间运行的 fleet 探索、修复、验证和沉淀目标 |
 | [2026-06-28 Fleet Inventory](docs/reference/fleet-inventory-2026-06-28.md) | 当前脱敏机器健康画像 |
+| [2026-06-28 Fleet Ledger](docs/ledger/2026-06-28-openclaw-fleet.md) | 当前目标执行记录、证据和剩余分类 |
 | [2026-06-28 Completion Audit](docs/audits/2026-06-28-openclaw-fleet-completion-audit.md) | 当前目标完成度审计 |
 
 ## 核心原则

@@ -8,6 +8,7 @@ This audit checks the active OpenClaw fleet optimization goal against current ev
 | --- | --- | --- |
 | Durable goal file exists | Completed | `docs/goals/openclaw-fleet-optimization.md` added. |
 | Current local machine inventory exists | Completed | `docs/reference/fleet-inventory-2026-06-28.md` added with sanitized aggregate fields. |
+| Goal ledger exists | Completed | `docs/ledger/2026-06-28-openclaw-fleet.md` added with actions, evidence, classifications, and remote commits. |
 | In-scope machines enumerated | Completed | `machine-01` is in scope. No additional machine is in scope without authorized access. |
 | Gateway/service state verified | Completed | Current status evidence classified Gateway as healthy and service as running. |
 | Cron aggregate verified | Completed | Current cron JSON aggregate: 36 total, 28 enabled, 8 disabled, 4 command, 24 agentTurn, 0 model overrides. |
@@ -36,5 +37,5 @@ Completion evidence:
 
 - Sensitive-data scans passed.
 - Documentation changes were committed and pushed.
-- Remote tree confirmed the goal, inventory, and audit documents are present.
+- Remote tree confirmed the goal, inventory, ledger, and audit documents are present.
 - Remaining local OpenClaw issues are classified as optional-provider, safe-deferred, intentional, or historical rather than unhandled blockers.
