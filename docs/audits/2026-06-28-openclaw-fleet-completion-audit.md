@@ -16,8 +16,8 @@ This audit checks the active OpenClaw fleet optimization goal against current ev
 | GitHub CLI auth verified safely | Completed | Keyring auth works when stale environment token variables are unset. |
 | Remote `claws` state verified | Completed | `kt-aicoding/claws` reachable on `main`. |
 | Remaining doctor warnings classified | Completed | Warnings classified as setup-mode, optional-provider auth, orphan-transcripts, cron-store review, and memory-search-disabled. |
-| Public docs avoid sensitive data | Pending final scan | Run custom sensitive-data scan and `gitleaks` after this audit is committed. |
-| Remote docs pushed | Pending push | Commit and push after scans pass. |
+| Public docs avoid sensitive data | Completed | Custom sensitive-data scan had no findings; `gitleaks` returned 0 findings for working tree and reachable git history. |
+| Remote docs pushed | Completed | Remote `main` included commit `dbe838b` with the goal, inventory, and audit documents. |
 
 ## Current non-blocking items
 
@@ -28,8 +28,13 @@ This audit checks the active OpenClaw fleet optimization goal against current ev
 
 ## Completion decision
 
-Not complete until:
+Completed for the currently authorized scope.
 
-1. Sensitive-data scans pass after the documentation edits.
-2. Changes are committed and pushed to `kt-aicoding/claws`.
-3. Remote tree confirms the new goal, inventory, and audit documents are present.
+Current scope includes `machine-01` and the public `kt-aicoding/claws` repository. Additional OpenClaw machines are not included until the user provides an authorized access path.
+
+Completion evidence:
+
+- Sensitive-data scans passed.
+- Documentation changes were committed and pushed.
+- Remote tree confirmed the goal, inventory, and audit documents are present.
+- Remaining local OpenClaw issues are classified as optional-provider, safe-deferred, intentional, or historical rather than unhandled blockers.
