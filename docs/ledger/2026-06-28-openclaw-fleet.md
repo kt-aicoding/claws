@@ -7,7 +7,8 @@ This ledger records the sanitized work performed for the OpenClaw fleet optimiza
 | Item | Status | Notes |
 | --- | --- | --- |
 | machine-01 | completed | Local OpenClaw installation audited with sanitized aggregate evidence. |
-| additional machines | not in scope | No authorized safe access path was available in this run. |
+| machine-02 | externally blocked | Known-host-only candidate discovered, but safe BatchMode SSH was not connectable. OpenClaw presence unknown. |
+| additional machines | not discovered | No Tailscale CLI and no SSH config aliases were available in this run. |
 | kt-aicoding/claws | completed | Public documentation, inventory, goal file, and audit updated. |
 
 ## Actions
@@ -21,6 +22,7 @@ This ledger records the sanitized work performed for the OpenClaw fleet optimiza
 | Verify Ark model path | completed | Gateway Ark smoke test returned the expected marker. |
 | Verify GitHub remote | completed | Remote `main` contained the expected public documentation tree. |
 | Run sensitive-data scans | completed | Custom scan and `gitleaks` both returned no findings. |
+| Discover other known machines | completed | Tailscale unavailable, SSH config had no aliases, and one known-host-only candidate was not connectable. |
 
 ## Remaining classifications
 
@@ -30,9 +32,11 @@ This ledger records the sanitized work performed for the OpenClaw fleet optimiza
 | Orphan transcripts | safe-deferred | Archive only through a reliable official path or with explicit user approval. |
 | Doctor cron warning for model-driven shell/process jobs | intentional-review | Do not mechanically convert model-driven content jobs to command cron. |
 | Memory search disabled | intentional | Re-enable only if memory search is desired. |
+| machine-02 known-host candidate | externally-blocked | Provide authorized/connectable access or sanitized aggregate output. |
 | Additional OpenClaw machines | external-input-needed | Add machines after user provides authorized access or sanitized inventory data. |
 
 ## Remote commits
 
 - `dbe838b` - added OpenClaw fleet goal and audit artifacts.
 - `7c0cc9b` - closed the OpenClaw fleet audit for the authorized scope.
+- `e26d11d` - added this fleet ledger.

@@ -9,7 +9,8 @@ This audit checks the active OpenClaw fleet optimization goal against current ev
 | Durable goal file exists | Completed | `docs/goals/openclaw-fleet-optimization.md` added. |
 | Current local machine inventory exists | Completed | `docs/reference/fleet-inventory-2026-06-28.md` added with sanitized aggregate fields. |
 | Goal ledger exists | Completed | `docs/ledger/2026-06-28-openclaw-fleet.md` added with actions, evidence, classifications, and remote commits. |
-| In-scope machines enumerated | Completed | `machine-01` is in scope. No additional machine is in scope without authorized access. |
+| In-scope machines enumerated | Completed | `machine-01` completed; `machine-02` recorded as a known-host-only candidate externally blocked by lack of connectable authorized access. |
+| Other-machine discovery performed | Completed | Tailscale CLI unavailable, SSH config had no aliases, and one known-host-only candidate was not connectable through safe BatchMode SSH. |
 | Gateway/service state verified | Completed | Current status evidence classified Gateway as healthy and service as running. |
 | Cron aggregate verified | Completed | Current cron JSON aggregate: 36 total, 28 enabled, 8 disabled, 4 command, 24 agentTurn, 0 model overrides. |
 | Model inheritance verified | Completed | Cron-level model override count is 0; default model family is Ark. |
@@ -25,17 +26,19 @@ This audit checks the active OpenClaw fleet optimization goal against current ev
 - Optional non-Ark provider auth is expired. This does not block Ark cron execution.
 - Orphan transcript archival is safe-deferred and requires explicit confirmation or an official reliable path.
 - Doctor still flags model-driven isolated agent jobs with shell/process tools. Pure reporting jobs have already been converted; remaining jobs need model reasoning and are not converted mechanically.
-- No authorized access to additional OpenClaw machines was available in this run, so no remote machine is included.
+- `machine-02` is a known-host-only candidate. Safe BatchMode SSH was not connectable, so OpenClaw presence is unknown and no raw host identifier is published.
+- No other authorized access path was available in this run.
 
 ## Completion decision
 
 Completed for the currently authorized scope.
 
-Current scope includes `machine-01` and the public `kt-aicoding/claws` repository. Additional OpenClaw machines are not included until the user provides an authorized access path.
+Current scope includes `machine-01`, `machine-02` as an externally blocked known-host candidate, and the public `kt-aicoding/claws` repository. Additional OpenClaw machines are not included until the user provides an authorized access path.
 
 Completion evidence:
 
 - Sensitive-data scans passed.
 - Documentation changes were committed and pushed.
 - Remote tree confirmed the goal, inventory, ledger, and audit documents are present.
+- Known machine discovery was performed and documented without publishing hostnames, IP addresses, users, or raw SSH output.
 - Remaining local OpenClaw issues are classified as optional-provider, safe-deferred, intentional, or historical rather than unhandled blockers.
