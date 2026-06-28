@@ -21,6 +21,9 @@ OpenClaw 运维实践、定时任务修复经验和多机器治理手册。
 | [最终 Cron 清单](docs/reference/final-cron-inventory.md) | 脱敏后的任务结构、类型和粗粒度频率 |
 | [Ark 模型配置说明](docs/reference/ark-model-configuration.md) | 如何避免 cron 任务模型漂移，统一继承 Ark 默认模型栈 |
 | [机器盘点模板](docs/reference/machine-inventory-template.md) | 用别名和聚合指标记录多台 OpenClaw 机器 |
+| [OpenClaw Fleet Optimization Goal](docs/goals/openclaw-fleet-optimization.md) | 长时间运行的 fleet 探索、修复、验证和沉淀目标 |
+| [2026-06-28 Fleet Inventory](docs/reference/fleet-inventory-2026-06-28.md) | 当前脱敏机器健康画像 |
+| [2026-06-28 Completion Audit](docs/audits/2026-06-28-openclaw-fleet-completion-audit.md) | 当前目标完成度审计 |
 
 ## 核心原则
 
