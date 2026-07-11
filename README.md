@@ -25,6 +25,7 @@ OpenClaw 运维实践、定时任务修复经验和多机器治理手册。
 | [2026-06-28 Fleet Inventory](docs/reference/fleet-inventory-2026-06-28.md) | 当前脱敏机器健康画像 |
 | [2026-06-28 Fleet Ledger](docs/ledger/2026-06-28-openclaw-fleet.md) | 当前目标执行记录、证据和剩余分类 |
 | [2026-06-28 Completion Audit](docs/audits/2026-06-28-openclaw-fleet-completion-audit.md) | 当前目标完成度审计 |
+| [本地 OpenClaw 项目集合](projects/README.md) | 集中导航相关产品、迁移实践和待整理知识库，同时保留各自仓库边界 |
 
 ## 核心原则
 

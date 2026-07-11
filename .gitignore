@@ -6,6 +6,10 @@ node_modules/
 dist/
 coverage/
 
+# Local OpenClaw project collection. Child repositories keep their own Git
+# history and may contain project-local ignored files.
+/projects/*/
+
 # OpenClaw local runtime state must not be committed.
 .openclaw/
 openclaw.json

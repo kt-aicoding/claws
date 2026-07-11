@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Ignore separately governed local project directories"
+paths = ['''^projects/[^/]+/''']
